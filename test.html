@@ -99,7 +99,6 @@
         <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
         <a href="https://gn-math.github.io" target="_blank" rel="noopener">gn-math</a>
         <a href="#" onclick="openCustomAboutBlank('https://gn-games.github.io'); return false;">about:blank</a>
-        <a href="#" onclick="youtube('https://www.crazygames.com'); return false;">about:blank</a>
     </div>
 </footer>
 <script>
@@ -124,28 +123,7 @@ function openCustomAboutBlank(url) {
     }
 }
 </script>
-<script>
-function youtube(url)
-    const win = window.open('about:blank', '_blank');
-    if (win) {
-        win.document.write(`
-            <html>
-                <head>
-                    <title>crazygames<title>
-                    <style>
-                        html, body { height: 100%; margin:0; }
-                        iframe { border: none; width: 100vw; height: 100vh
-                    </style>
-                </head>
-                <body>
-                    <iframe src="${url}" allowfullscreen></iframe>
-                </body>
-            </html>
-        `);
-        win.document.colse();
-    }
-}
-</script>
+
 <script src="script.js"></script>
 </body>
 </html>
