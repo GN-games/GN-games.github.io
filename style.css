@@ -17,21 +17,6 @@
             --shadow: rgba(0, 0, 0, 0.4);
             --popup-bg: #252525;
         }
-        #background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Ensures the video stays behind other elements */
-    pointer-events: none; /* Prevents interaction with the video */
-}
-
-body {
-    position: relative; /* Ensures content is layered above the video */
-    z-index: 1; /* Places content above the video */
-}
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
