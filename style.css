@@ -16,11 +16,11 @@
         .dark-mode {
             --primary-color: #2c2c2c;
             --text-color: #e0e0e0;
-            --background-color: #0a0a0a;
+            --background-color: #1f1f1f;
             --card-bg: #252525;
             --card-border: #383838;
             --shadow: rgba(0, 0, 0, 0.4);
-            --popup-bg: #252525;
+            --popup-bg: #1f1f1f;
         }
 
         body {
@@ -34,7 +34,7 @@
 
         header {
             background-color: var(--primary-color);
-            color: white;
+            color: rgb(198, 148, 255);
             padding: 1rem;
             text-align: center;
             position: sticky;
@@ -125,14 +125,14 @@
             border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
-            box-shadow: 0 2px 4px var(--shadow);
+            box-shadow: 0 5px 7px var(--shadow);
             display: flex;
             flex-direction: column;
         }
 
         .zone-item:hover {
             background-color: var(--card-border);
-            transform: scale(1.1);
+            transform: scale(1.07);
             rotate : 3deg;
             transition: background-color 0.3s, rotate 0.3s;
         }
