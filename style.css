@@ -58,7 +58,7 @@
         .logo:hover {
     font-size: 1.5rem;
     font-weight: bold;
-    animation: spin 0.5s linear infinite;
+    animation: spin 1s linear infinite;
     display: inline-block;
 }
 
@@ -79,16 +79,16 @@
 
         #searchBar {
             padding: 0.5rem;
-            border-radius: 4px;
-            border: 1px solid var(--card-border);
+            border-radius: 9px;
+            border: 2px solid var(--card-border);
             flex-grow: 1;
             min-width: 0;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         #sortOptions {
             padding: 0.5rem;
-            border-radius: 4px;
+            border-radius: 9px;
             border: 1px solid var(--card-border);
             font-size: 16px;
         }
@@ -121,7 +121,7 @@
 
         .zone-item {
             background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
+            border: 3px solid var(--card-border);
             border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
@@ -132,6 +132,9 @@
 
         .zone-item:hover {
             background-color: var(--card-border);
+            transform: scale(1.1);
+            rotate : 3deg;
+            transition: background-color 0.3s, rotate 0.3s;
         }
 
         .zone-item img {
