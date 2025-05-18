@@ -145,12 +145,21 @@
             flex-direction: column;
         }
 
+        @keyframes rotateLoop {
+            0% {
+                transform: scale(1.07) rotate(-5deg);
+            }
+            50% {
+                transform: scale(1.07) rotate(5deg);
+         }
+            100% {
+                transform: scale(1.07) rotate(-5deg);
+            }
+        }
+
         .zone-item:hover {
             background-color: var(--card-border);
-            transform: scale(1.07);
-            rotate : 3deg;
-            transition: background-color 0.3s, rotate 0.3s;
-            transition: transform 0.5s;
+            animation: rotateLoop 1.5s infinite ease-in-out; /* Adjust duration as needed */
             box-shadow: 45px 45px 45px var(--shadow);
             filter: brightness(1.07);
         }
