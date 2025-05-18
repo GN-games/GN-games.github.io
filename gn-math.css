@@ -55,7 +55,7 @@
 
         header {
             background-color: var(--primary-color);
-            color: rgb(198, 148, 255);
+            color: rgb(255, 255, 255);
             padding: 1rem;
             text-align: center;
             position: sticky;
