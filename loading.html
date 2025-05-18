@@ -1,91 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #000;
-      overflow: hidden;
-    }
-    
-    .container {
-      position: absolute;
-      top: 20%;
-      height: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .loadingtext {
-      position: sticky;
-      font-size: 5vmin;
-      color: rgb(255, 255, 255);
-      text-shadow: 0 0 15px rgb(124, 124, 124),
-                   inset 0 0 15px rgb(124, 124, 124);
-      animation: loadingtext 1.5s ease-in-out infinite;
-    }
-
-    .circle {
-      position: absolute;
-      background: invisible;
-      width: calc(var(--i) * 2.5vmin);
-      aspect-ratio: 1;
-      border-radius: 60%;
-      border: 3px solid rgb(0, 255, 13);
-      transform-style: preserve-3d;
-      transform: rotateX(70deg) translateZ(50px);
-      animation: animate 2s ease-in-out calc(var(--i) * 0.08s) infinite;
-      box-shadow: 0 0 15px rgb(124, 124, 124),
-                  inset 0 0 15px rgb(124, 124, 124);
-    }
-
-    @keyframes animate {
-      0%, 100% {
-        transform: rotateX(70deg) translateZ(50px) translateY(0);
-        filter: hue-rotate(0);
-      }
-
-      50% {
-        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
-        filter: hue-rotate(360deg);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="loading.css">
 </head>
-<body>
-  <div class="container">
-    <div class="circle" style="--i:0;"></div>
-    <div class="circle" style="--i:1;"></div>
-    <div class="circle" style="--i:2;"></div>
-    <div class="circle" style="--i:3;"></div>
-    <div class="circle" style="--i:4;"></div>
-    <div class="circle" style="--i:5;"></div>
-    <div class="circle" style="--i:6;"></div>
-    <div class="circle" style="--i:7;"></div>
-    <div class="circle" style="--i:8;"></div>
-    <div class="circle" style="--i:9;"></div>
-    <div class="circle" style="--i:10;"></div>
-    <div class="circle" style="--i:11;"></div>
-    <div class="circle" style="--i:12;"></div>
-    <div class="circle" style="--i:13;"></div>
-    <div class="circle" style="--i:14;"></div>
-    <div class="circle" style="--i:15;"></div>
-    <div class="circle" style="--i:16;"></div>
-    <div class="circle" style="--i:17;"></div>
-    <div class="circle" style="--i:18;"></div>
-    <div class="circle" style="--i:19;"></div>
-    <div class="circle" style="--i:20;"></div>
-    <dic class="loadingtext">Loading...</div>
-  </div>
-</body>
-</html>
+  <body>
+<div class="bg-1"></div>
+<section class="loading-data">
+  <h2 class="loading-text text-center text-uppercase">
+    <span class="char">L</span>
+    <span class="char">o</span>
+    <span class="char">a</span>
+    <span class="char">d</span>
+    <span class="char">i</span>
+    <span class="char">n</span>
+    <span class="char">g</span>
+  </h2>
+</section>
+  </body>
