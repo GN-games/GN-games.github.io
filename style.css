@@ -117,9 +117,9 @@
             cursor: pointer;
         }
         #settings:hover {
-        rotate : 5deg;
-        transition: background-color 0.3s, rotate 0.3s;
-        transform: scale(1.07)
+            rotate : 5deg;
+            transition: background-color 0.3s, rotate 0.3s;
+            transform: scale(1.07)
         }
 
         main {
@@ -152,9 +152,10 @@
             }
             50% {
                 transform: scale(1.07) rotate(7.7deg);
-         }
+            }
             100% {
                 transform: scale(1.07) rotate(-7.7deg);
+
             }
         }
 
@@ -162,7 +163,7 @@
             background-color: var(--card-border);
             animation: rotateLoop 1.5s infinite ease-in-out; /* Adjust duration as needed */
             box-shadow: 45px 45px 45px var(--shadow);
-            filter: brightness(1.07);
+            filter: brightness(1.1);
         }
 
         .zone-item img {

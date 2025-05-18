@@ -6,7 +6,7 @@
     rgb(255, 0, 157) 0%,
     rgba(111, 0, 214, 0.9) 100%
   );
-  --bg-dark: #2c2c2c;
+  --bg-dark: #292929;
   --white: #fff;
 }
 
@@ -73,7 +73,7 @@ body {
   .char {
     opacity: 0;
     animation: loading-text 2s infinite ease-in-out;
-    color: var(--white);
+    color: rgb(255, 255, 255);
     &:nth-child(1) {
       animation-delay: 0.9s;
     }
