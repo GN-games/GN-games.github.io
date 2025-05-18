@@ -28,6 +28,13 @@
                 container.innerHTML = `Error loading zones: ${error}`;
             }
         }
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loadingScreen');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 5000); // 5 seconds
+        }
+        );
         async function fetchPopularity() {
             try {
                 const response = await fetch("https://data.jsdelivr.com/v1/stats/packages/gh/gn-math/html@main/files?period=year");
