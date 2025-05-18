@@ -3,10 +3,10 @@
 :root {
   --bg-pink: linear-gradient(
     to right,
-    rgba(218, 28, 96, 1) 0%,
-    rgba(243, 102, 31, 0.9) 100%
+    rgb(255, 0, 157) 0%,
+    rgba(111, 0, 214, 0.9) 100%
   );
-  --bg-dark: rgb(15,24,42);
+  --bg-dark: #2c2c2c;
   --white: #fff;
 }
 
