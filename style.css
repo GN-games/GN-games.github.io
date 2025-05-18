@@ -147,13 +147,13 @@
 
         @keyframes rotateLoop {
             0% {
-                transform: scale(1.07) rotate(-7deg);
+                transform: scale(1.07) rotate(-7.7deg);
             }
             50% {
-                transform: scale(1.07) rotate(7deg);
+                transform: scale(1.07) rotate(7.7deg);
          }
             100% {
-                transform: scale(1.07) rotate(-7deg);
+                transform: scale(1.07) rotate(-7.7deg);
             }
         }
 
