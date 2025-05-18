@@ -32,7 +32,7 @@
             const loadingScreen = document.getElementById('loadingScreen');
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
-            }, 5000); // 5 seconds
+            }, 3000); // 3 seconds
         }
         );
         async function fetchPopularity() {
@@ -85,7 +85,7 @@
             if (container.innerHTML === "") {
                 container.innerHTML = "No zones found.";
             } else {
-                document.getElementById("zoneCount").textContent = `Zones Loaded: ${zones.length}`;
+                document.getElementById("zoneCount").textContent = `Games Loaded: ${zones.length}`;
             }
         }
 
