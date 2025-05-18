@@ -32,7 +32,7 @@
             const loadingScreen = document.getElementById('loadingScreen');
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
-            }, 3000); // 3 seconds
+            }, 2500); // 2.5 seconds
         }
         );
         async function fetchPopularity() {
