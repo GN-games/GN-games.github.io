@@ -56,9 +56,9 @@
             font-weight: bold;
         }
         .logo:hover {
-        rotate : -5deg;
-        transition: background-color 0.3s, rotate 0.3s;
-        transform: scale(1.07)
+            rotate : -5deg;
+            transition: background-color 0.3s, rotate 0.3s;
+            transform: scale(1.07)
         }
         .search-container {
             display: flex;
@@ -129,6 +129,9 @@
             transform: scale(1.07);
             rotate : 3deg;
             transition: background-color 0.3s, rotate 0.3s;
+            transition: transform 0.5s;
+            box-shadow: 45px 45px 45px var(--shadow);
+            filter: brightness(1.07);
         }
 
         .zone-item img {
@@ -197,6 +200,9 @@
 
         #zoneAuthor:hover {
             text-decoration: underline;
+            rotate : 2deg;
+            zoom : 1.05;
+            transition: background-color 0.3s, rotate 0.3s;
         }
 
         .zone-controls {
@@ -213,9 +219,13 @@
             cursor: pointer;
             font-size: 14px;
         }
+        
 
         .zone-controls button:hover {
             background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+            transition: background-color 0.3s, transform 0.3s;
+            rotate: 4deg;
         }
 
         #zoneFrame {
@@ -325,6 +335,9 @@
 
         .footer-links a:hover {
             text-decoration: underline;
+            color :#e0e0e0;
+            rotate : -5deg;
+            transition : background-color 0.3s, rotate 0.3s;
         }
 
         #zoneCount {
