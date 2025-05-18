@@ -73,7 +73,7 @@ body {
   .char {
     opacity: 0;
     animation: loading-text 2s infinite ease-in-out;
-    color: rgb(255, 255, 255);
+    color: rgb(173, 173, 173);
     &:nth-child(1) {
       animation-delay: 0.9s;
     }

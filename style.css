@@ -148,20 +148,20 @@
 
         @keyframes rotateLoop {
             0% {
-                transform: scale(1.07) rotate(-7.7deg);
+                transform: scale(1.07) rotate(-5.7deg);
             }
             50% {
-                transform: scale(1.07) rotate(7.7deg);
+                transform: scale(1.07) rotate(5.7deg);
             }
             100% {
-                transform: scale(1.07) rotate(-7.7deg);
+                transform: scale(1.07) rotate(-5.7deg);
 
             }
         }
 
         .zone-item:hover {
             background-color: var(--card-border);
-            animation: rotateLoop 1.5s infinite ease-in-out; /* Adjust duration as needed */
+            animation: rotateLoop 2s infinite ease-in-out;
             box-shadow: 45px 45px 45px var(--shadow);
             filter: brightness(1.1);
         }
