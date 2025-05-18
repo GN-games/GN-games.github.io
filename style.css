@@ -221,9 +221,7 @@
 
         #zoneAuthor:hover {
             text-decoration: underline;
-            rotate : 2deg;
             zoom : 1.05;
-            transition: background-color 0.3s, rotate 0.3s;
         }
 
         .zone-controls {
