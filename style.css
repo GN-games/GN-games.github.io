@@ -77,6 +77,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             background: transparent;
+            text-color: gray;
         }
         .logo:hover {
             rotate : -5deg;
