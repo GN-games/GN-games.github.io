@@ -46,20 +46,7 @@
                         popularityData[id] = file.hits.total;
                     }
                 });
-            } catch (error) {
-                popularityData[0] = 0;
-            }
-                async function fetchPopularity() {
-            try {
-                const response = await fetch("https://data.jsdelivr.com/v1/stats/packages/gh/gn-math/html@main/files?period=month");
-                const data = await response.json();
-                data.forEach(file => {
-                    const idMatch = file.name.match(/\/(\d+)\.html$/);
-                    if (idMatch) {
-                        const id = parseInt(idMatch[1]);
-                        popularityData[id] = file.hits.total;
-                    }
-                });
+
             } catch (error) {
                 popularityData[0] = 0;
             }
