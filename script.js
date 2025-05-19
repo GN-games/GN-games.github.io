@@ -37,7 +37,7 @@
         );
         async function fetchPopularity() {
             try {
-                const response = await fetch("https://data.jsdelivr.com/v1/stats/packages/gh/gn-math/html@main/files?period=year");
+                const response = await fetch("https://data.jsdelivr.com/v1/stats/packages/gh/gn-math/html@main/files?period=day");
                 const data = await response.json();
                 data.forEach(file => {
                     const idMatch = file.name.match(/\/(\d+)\.html$/);
