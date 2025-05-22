@@ -34,10 +34,3 @@ arc.setAttribute("async", "");
 arc.setAttribute("src", "https://arc.io/widget.min.js#eRPHFgiC");
 document.head.append(arc);
 script("Injected script 3/5");
-
-const adblock = document.createElement("script");
-adblock.setAttribute("src", "https://fundingchoicesmessages.google.com/i/pub-5756835229788588?ers=1");
-adblock.setAttribute("nonce", "yibq-w_TR5NOCRWsU-VL0Q");
-adblock.setAttribute("async", "");
-document.head.append(adblock);
-script("Injected script 4/5");
