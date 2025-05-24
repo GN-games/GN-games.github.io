@@ -262,11 +262,7 @@
             const popupBody = document.getElementById('popupBody');
             popupBody.innerHTML = `
                 <div style="max-height: 60vh; overflow-y: auto;">
-                    <h2>i copied and remade this website the original website is </h2> <h2><a href="https://gn-math.github.io/" target="_blank">here here here here</a></h2>
-                    <h2>i do not own this website.</h2> <h2>its a copy of the original website.</h2>
-                    <h2>i do not own the data on this website.</h2>
-                    <h2> this is the ad free version of the website.</h2>
-                    <h2>the games/zones are not mine.</h2> <h2>they are stored on a github repository that i dont own.</h2>
+                    <h2>icl ts pmo</h2>
                 </div>
             `;
             popupBody.contentEditable = false;

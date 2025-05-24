@@ -43,7 +43,7 @@
     </div>
     <header>
         <div class="header-content">
-            <button onclick class="logo">GN-games</button>
+            <button class="logo" onclick="window.location.href='https://gn-games.github.io';">Gn-games</button>
             <div class="search-container">
                 <input type="text" id="searchBar" placeholder="Search games..." oninput="filterZones()">
                 <select id="sortOptions" onchange="sortZones()">
@@ -98,7 +98,7 @@
         <a href="#" onclick="showContact(); return false;">Contact</a>
         <a href="#" onclick="loadPrivacy(); return false;">Privacy Policy</a>
         <a href="javascript:saveData()">Export Data</a>
-        <label for="importData" style="color: var(--primary-color); cursor: pointer;">Import Data</label>
+        <label class="footer-links" for="importData">Import Data</label>
         <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
         <a href="https://gn-math.github.io" target="_blank" rel="noopener">gn-math</a>
         <a href="#" onclick="openCustomAboutBlank('https://gn-games.github.io'); return false;">about:blank</a>
