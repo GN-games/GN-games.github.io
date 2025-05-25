@@ -79,10 +79,12 @@
             background: transparent;
             color: gray;
         }
+        
         .logo:hover {
             rotate : -5deg;
             transition: background-color 0.3s, rotate 0.3s;
             transform: scale(1.07);
+
         }
         .search-container {
             display: flex;
@@ -172,9 +174,10 @@
 
         .zone-item:hover {
             background-color: var(--card-border);
-            animation: rotateLoop 3s infinite ease-in-out;
+            animation: rotateLoop 5s infinite ease-in-out;
             box-shadow: 45px 45px 45px var(--shadow);
-            filter: brightness(1.1);
+            filter: brightness(1.05);
+            transition: all 0.5s ease-in-out;
         }
 
         .zone-item img {
