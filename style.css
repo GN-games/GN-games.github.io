@@ -4,13 +4,13 @@
         }
 
         :root {
-            --primary-color: #3f3f3f;
-            --text-color: #6b6b6b;
-            --background-color: #8d8d8d;
-            --card-bg: #3f3f3f;
-            --card-border: #e0e0e0;
-            --shadow: rgba(0, 0, 0, 0.1);
-            --popup-bg: #8d8d8d;
+            --primary-color: #2c2c2c;
+            --text-color: #e0e0e0;
+            --background-color: #1f1f1f;
+            --card-bg: #252525;
+            --card-border: #383838;
+            --shadow: rgba(0, 0, 0, 0.4);
+            --popup-bg: #1f1f1f;
         }
 
         .dark-mode {
@@ -37,11 +37,11 @@
         }
 
         #loadingIframe {
-            width: 80%;
-            height: 80%;
+            width: 70%;
+            height: 70%;
             border: none;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
+            border-radius: 60px;
         }
 
         body {
@@ -150,20 +150,29 @@
 
         @keyframes rotateLoop {
             0% {
-                transform: scale(1.07) rotate(-5.7deg);
+                transform: scale(1.07) rotate(0deg);
             }
-            50% {
+            20% {
                 transform: scale(1.07) rotate(5.7deg);
             }
-            100% {
+            40% {
                 transform: scale(1.07) rotate(-5.7deg);
+            }
+            60% {
+                transform: scale(1.07) rotate(5.7deg);
+            }
+            80% {
+                transform: scale(1.07) rotate(-5.7deg);
+            }
+            100% {
+                transform: scale(1.07) rotate(0deg);
 
             }
         }
 
         .zone-item:hover {
             background-color: var(--card-border);
-            animation: rotateLoop 2s infinite ease-in-out;
+            animation: rotateLoop 3s infinite ease-in-out;
             box-shadow: 45px 45px 45px var(--shadow);
             filter: brightness(1.1);
         }
