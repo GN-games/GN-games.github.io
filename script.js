@@ -25,7 +25,7 @@
         popupMessage.innerHTML = `
             <p>Games are not supported on this device.</p>
             <p>Try playing on a PC or a laptop.</p>
-            <button style="margin-top: 20px; padding: 10px 20px; font-size: 1rem; cursor: pointer;" onclick="document.body.removeChild(this.parentNode.parentNode)">Close</button>
+            <button style="margin-top: 20px; padding: 10px 20px; font-size: 1rem; cursor: pointer;" onclick="href="https://www.google.com();">Exit</button>
         `;
 
         popupOverlay.appendChild(popupMessage);
