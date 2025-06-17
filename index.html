@@ -38,9 +38,6 @@
 </head>
 
 <body class="dark-mode">
-    <div id="loadingScreen">
-        <iframe src="loading.html" id="loadingIframe"></iframe>
-    </div>
     <header>
         <div class="header-content">
             <button class="logo" onclick="window.location.href='https://gn-games.github.io';">Gn-games</button>
@@ -61,7 +58,15 @@
 
     <main>
         <div id="zoneCount">Loading games...</div>
-        <div id="container">Loading other stuff...</div>
+        <details id="featuredZonesWrapper" open>
+            <summary style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">Featured Zones</summary>
+            <div id="featuredZones" class="zone-container"></div>
+        </details>
+        <br><hr><br>
+        <details id="allZonesWrapper" open>
+            <summary style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">All Zones</summary>
+            <div id="container">Loading...</div>
+        </details>
     </main>
 
     <div id="zoneViewer">

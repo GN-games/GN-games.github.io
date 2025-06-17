@@ -414,3 +414,11 @@
                 font-size: 14px;
             }
         }
+
+        #featuredZones {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
