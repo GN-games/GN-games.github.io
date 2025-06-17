@@ -79,8 +79,6 @@ async function listZones() {
                             popup.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
                             popup.style.fontFamily = "Arial, sans-serif";
 
-                            popup.innerHTML = `Play more games at <a href="https://gn-math.github.io" target="_blank" style="color:#004085; font-weight:bold;">https://gn-math.github.io</a>!`;
-
                             const closeBtn = document.createElement("button");
                             closeBtn.innerText = "✖";
                             closeBtn.style.marginLeft = "10px";
@@ -130,22 +128,70 @@ async function fetchPopularity() {
     }
 }
 
+let startTime = performance.now(); // Record the start time
+
 window.addEventListener('load', function () {
-    const observer = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-            mutation.addedNodes.forEach(node => {
-                if (node.nodeType === 1 && node.matches('div.zone-item')) {
-                    const button = node.querySelector('button');
-                    if (button && button.textContent.trim() === '[!] SUGGEST GAMES .gg/D4c9VFYWyU') {
-                        node.style.display = 'none';
-                    }
-                }
-            });
-        });
+    const zoneContainer = document.getElementById('container');
+    const featuredZones = document.getElementById('featuredZones');
+    const zoneCount = document.getElementById('zoneCount');
+
+    // Wait for all games and covers to load
+    const observer = new MutationObserver(() => {
+        if (zoneContainer.textContent.trim() !== 'Loading...' && featuredZones.textContent.trim() !== '') {
+            let endTime = performance.now();
+            let loadTime = ((endTime - startTime) / 1000).toFixed(2);
+
+            const timerDiv = document.createElement('div');
+            timerDiv.style.marginTop = '10px';
+            timerDiv.style.color = 'white';
+            timerDiv.style.fontSize = '1rem';
+            timerDiv.textContent = ``;
+            if (zoneCount) {
+                zoneCount.appendChild(timerDiv);
+            }
+
+            observer.disconnect();
+        }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(zoneContainer, { childList: true, subtree: true });
+    observer.observe(featuredZones, { childList: true, subtree: true });
 });
+searchBar.addEventListener('input', filterZones);
+sortOptions.addEventListener('change', sortZones);
+
+// Hide Discord invite zone-item after zones are loaded
+function hideDiscordInvite() {
+    const zoneItems = document.querySelectorAll('.zone-item');
+    zoneItems.forEach(node => {
+        const button = node.querySelector('button');
+        if (button && button.textContent.trim() === '[!] SUGGEST GAMES .gg/D4c9VFYWyU') {
+            node.style.display = 'none';
+        }
+    });
+}
+
+// Show load time and hide Discord invite after zones are displayed
+const origDisplayZones = displayZones;
+displayZones = function(zones) {
+    origDisplayZones(zones);
+    hideDiscordInvite();
+
+    // Show load time if not already shown
+    const zoneCount = document.getElementById('zoneCount');
+    if (zoneCount && !zoneCount.querySelector('.games-load-time')) {
+        let endTime = performance.now();
+        let loadTime = ((endTime - startTime) / 1000).toFixed(2);
+        const timerDiv = document.createElement('div');
+        timerDiv.className = 'games-load-time';
+        timerDiv.style.marginTop = '10px';
+        timerDiv.style.color = 'white';
+        timerDiv.style.fontSize = '1rem';
+        timerDiv.textContent = `Games loaded in: ${loadTime} seconds`;
+        zoneCount.appendChild(timerDiv);
+    }
+};
+
 
 function sortZones() {
     const sortBy = sortOptions.value;
