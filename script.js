@@ -40,9 +40,9 @@ let zoneFrame = document.getElementById('zoneFrame');
 const searchBar = document.getElementById('searchBar');
 const sortOptions = document.getElementById('sortOptions');
 // https://www.jsdelivr.com/tools/purge
-const zonesURL = "https://cdn.jsdelivr.net/gh/GOREFFPLAZY/assetss@main/zones.json";
-const coverURL = "https://cdn.jsdelivr.net/gh/gn-math/covers@main";
-const htmlURL = "https://cdn.jsdelivr.net/gh/GOREFFPLAZY/assetss/@main/html";
+const zonesURL = "https://cdn.jsdelivr.net/gh/gn-math/assets@main/zones.json";
+const coverURL = "https://cdn.jsdelivr.net/gh/gn-math/covers@main/";
+const htmlURL = "https://cdn.jsdelivr.net/gh/gn-math/html@main";
 let zones = [];
 let popularityData = {};
 const featuredContainer = document.getElementById('featuredZones');
@@ -129,6 +129,23 @@ async function fetchPopularity() {
         popularityData[0] = 0;
     }
 }
+
+window.addEventListener('load', function () {
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1 && node.matches('div.zone-item')) {
+                    const button = node.querySelector('button');
+                    if (button && button.textContent.trim() === '[!] SUGGEST GAMES .gg/D4c9VFYWyU') {
+                        node.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+});
 
 function sortZones() {
     const sortBy = sortOptions.value;
