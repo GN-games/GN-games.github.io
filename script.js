@@ -128,14 +128,14 @@ async function fetchPopularity() {
     }
 }
 
-let startTime = performance.now(); // Record the start time
+let startTime = performance.now();
 
 window.addEventListener('load', function () {
     const zoneContainer = document.getElementById('container');
     const featuredZones = document.getElementById('featuredZones');
     const zoneCount = document.getElementById('zoneCount');
 
-    // Wait for all games and covers to load
+
     const observer = new MutationObserver(() => {
         if (zoneContainer.textContent.trim() !== 'Loading...' && featuredZones.textContent.trim() !== '') {
             let endTime = performance.now();
@@ -160,7 +160,6 @@ window.addEventListener('load', function () {
 searchBar.addEventListener('input', filterZones);
 sortOptions.addEventListener('change', sortZones);
 
-// Hide Discord invite zone-item after zones are loaded
 function hideDiscordInvite() {
     const zoneItems = document.querySelectorAll('.zone-item');
     zoneItems.forEach(node => {
@@ -171,13 +170,11 @@ function hideDiscordInvite() {
     });
 }
 
-// Show load time and hide Discord invite after zones are displayed
 const origDisplayZones = displayZones;
 displayZones = function(zones) {
     origDisplayZones(zones);
     hideDiscordInvite();
 
-    // Show load time if not already shown
     const zoneCount = document.getElementById('zoneCount');
     if (zoneCount && !zoneCount.querySelector('.games-load-time')) {
         let endTime = performance.now();
